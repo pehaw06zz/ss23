@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let n = parseInt(prompt("Nhap sl phan tu:"));
+        if ( n < 0 ){
+            alert("Phan tu khong hop le");
+        }else if (n === 0 ){ 
+            alert(" Mang khong hop le");
+        }else{ 
+            let Arr = [];
+            for( let i = 0 ; i < n ; i++ ){
+                Arr.push(prompt("phan tu thu"+(i+1)+""));
+            }
+            let max1= -1;
+            let max2=-2;
+            for ( let i = 0 ; i < n ;i++){
+                if(Arr[i]> max1){
+                    max2=max1;
+                    max1=Arr[i];
+                }else if ( Arr[i]> max2 && Arr[i]< max1){
+                    max2 = Arr[i];
+                }
+            }
+            if ( max2 === -1){
+                alert("Khong co phan tu nao lon thu 2");
+            }else{
+                alert(max2);
+            }
+        }
+    </script>
+</body>
+</html>

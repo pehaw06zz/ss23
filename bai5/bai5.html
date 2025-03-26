@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        let n = parseInt(prompt("Nhap sl phan tu: "));
+        if (n < 0) {
+            alert("Phan tu khong hop le");
+        } else if (n === 0) {
+            alert("Mang khong hop le");
+        } else {
+            let Arr = [];
+            for (let i = 0; i < n; i++) {
+                Arr.push(prompt("Phan tu thu " + (i + 1) + ""));
+            }
+            let sum = Arr.reduce((total, char) => {
+                let num = parseFloat(char);
+                return !isNaN(num) ? total + num : total;
+            }, 0);
+            if (sum === 0 && !Arr.some(char => !isNaN(char) && char.trim() !== "")) {
+                console.log("Không có phần tử nào là số");
+            } else {
+                console.log(sum);
+            }
+        }
+    </script>
+</body>
+
+</html>

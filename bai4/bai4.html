@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let n = parseInt(prompt("Nhap sl phan tu trong mang: "));
+        if ( n < 0 ){
+            alert(" Phan tu khong hop le");
+
+        }else if ( n === 0 ){ 
+            alert(" Mang khong hop le");
+        }else{ 
+            let Arr = [];
+            for ( let i = 0 ; i < n ; i++){ 
+                Arr.push(prompt("NHap phan tu thu "+ ( i +1)+ ""));
+
+            }
+            let numbers = Arr.filter(char => !isNaN(char)&& char.trim()!=="");
+            if ( numbers.length > 0 ){
+                alert(numbers.join(" "));
+            }else{ 
+                alert(" Khong co ky tu so ");
+            }
+        }
+    </script>
+</body>
+</html>

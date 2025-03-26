@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let input = prompt("NHap vao 1 day so bat ky ");
+        let number = input.split(" ").map(Number);
+        if(number.length===0||input.trim()===""){
+            alert("khong co so lon nhat");
+        }else{ 
+            let maxnum= number[0];
+            let maxidx=0;
+            for(let i = 0; i < number.length ; i++){
+                if(number[i]>maxnum){
+                    maxnum=number[i];
+                    maxidx=i;
+                }
+            }
+            alert("Số lớn nhất: " + maxnum + "\nVị trí: " + maxidx);
+        }
+    </script>
+</body>
+</html>
